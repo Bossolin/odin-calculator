@@ -7,3 +7,34 @@
 body {
   background-color: rgb(34, 129, 253);
 }
+
+.calculator {
+  background-color: #f1eba6;
+  display: flex;
+  flex-flow: column;
+  margin: 128px auto;
+  padding: 32px;
+  max-width: 334px;
+  max-height: 456px;
+  border: 2px solid black;
+}
+
+.output {
+  border: 2px solid black;
+  padding: 24px 12px;
+  font-size: x-large;
+}
+
+.input {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input div {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+}
