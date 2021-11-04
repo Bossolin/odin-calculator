@@ -14,3 +14,13 @@ function operate(num1, num2, operator) {
   else if (operator == "*") return multiply(num1, num2);
   else if (operator == "/") return divide(num1, num2);
 }
+
+const output = document.querySelector(".output");
+const inputs = document.querySelectorAll(".input > div > div");
+
+inputs.forEach((input) => {
+  input.addEventListener(
+    "click",
+    (e) => (output.innerText += e.target.innerText)
+  );
+});

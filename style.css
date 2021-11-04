@@ -25,6 +25,7 @@ body {
   padding: 24px 12px;
   font-size: x-large;
   height: 20%;
+  text-align: right;
 }
 
 .input {
