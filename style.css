@@ -15,7 +15,8 @@ body {
   margin: 128px auto;
   padding: 32px;
   max-width: 334px;
-  max-height: 456px;
+  max-height: 512px;
+  height: 480px;
   border: 2px solid black;
 }
 
@@ -23,18 +24,23 @@ body {
   border: 2px solid black;
   padding: 24px 12px;
   font-size: x-large;
+  height: 20%;
 }
 
 .input {
+  height: 80%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-.input div {
+.input > div {
   display: flex;
-  width: 48px;
-  height: 48px;
-  flex: auto;
+}
+
+.input > div > div {
+  padding: 10%;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
