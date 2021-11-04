@@ -20,12 +20,16 @@ body {
   border: 2px solid black;
 }
 
-.output {
+.display {
   border: 2px solid black;
-  padding: 24px 12px;
+  padding: 12px;
   font-size: x-large;
   height: 20%;
   text-align: right;
+}
+
+.display div {
+  height: 50%;
 }
 
 .input {
