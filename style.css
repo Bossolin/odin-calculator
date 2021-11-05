@@ -18,6 +18,7 @@ body {
   max-height: 512px;
   height: 480px;
   border: 2px solid black;
+  border-radius: 12px;
 }
 
 .display {

@@ -3,7 +3,7 @@ const result = document.querySelector(".result");
 const inputs = document.querySelectorAll(".number");
 const operators = document.querySelectorAll(".operator");
 const equals = document.querySelector(".equals");
-const AC = document.querySelector(".AC");
+const aC = document.querySelector(".AC");
 
 let num1 = 0;
 let num2 = 0;
@@ -44,10 +44,11 @@ equals.addEventListener("click", () => {
   computed = true;
 });
 
-AC.addEventListener("click", () => {
+aC.addEventListener("click", () => {
   num1 = 0;
   num2 = 0;
   operator = "";
+  computed = false;
   output.innerText = "";
   result.innerText = "";
 });
