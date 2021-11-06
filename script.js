@@ -11,10 +11,10 @@ let operator = "";
 let computed = false;
 
 function operate(num1, num2, operator) {
-  if (operator == "+") return (output.innerText = num1 + num2);
-  else if (operator == "-") return (output.innerText = num1 - num2);
-  else if (operator == "x") return (output.innerText = num1 * num2);
-  else if (operator == "/") return (output.innerText = num1 / num2);
+  if (operator == "+") return (num1 += num2);
+  else if (operator == "-") return (num1 -= num2);
+  else if (operator == "x") return (num1 *= num2);
+  else if (operator == "/") return (num1 /= num2);
 }
 
 inputs.forEach((input) => {
@@ -29,18 +29,27 @@ inputs.forEach((input) => {
 
 operators.forEach((item) =>
   item.addEventListener("click", (e) => {
-    num1 = +output.innerText;
-    operator = e.target.innerText;
-    result.innerText = `${num1} ${operator}`;
-    output.innerText = "";
+    if (num1 && operator) {
+      num2 = +output.innerText;
+      num1 = operate(num1, num2, operator);
+      operator = e.target.innerText;
+      result.innerText = `${num1} ${operator}`;
+      output.innerText = "";
+      computed = true;
+    } else {
+      num1 = +output.innerText;
+      operator = e.target.innerText;
+      result.innerText = `${num1} ${operator}`;
+      output.innerText = "";
+    }
   })
 );
 
 equals.addEventListener("click", () => {
-  num2 = +output.innerText;
-  console.log(operator);
+  if (!num2) num2 = +output.innerText;
   result.innerText = `${num1} ${operator} ${num2} =`;
-  operate(num1, num2, operator);
+  num1 = operate(num1, num2, operator);
+  output.innerText = num1;
   computed = true;
 });
 
