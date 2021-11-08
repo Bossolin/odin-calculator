@@ -9,6 +9,7 @@
 
 body {
   background-color: rgb(34, 129, 253);
+  background: linear-gradient(to right, rgb(23, 107, 233), rgb(228, 84, 241));
 }
 
 .calculator {
@@ -59,6 +60,7 @@ body {
   border: black 1px solid;
   margin: 2px;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .number,
@@ -66,9 +68,19 @@ body {
   background-color: #9796a1;
 }
 
+.number:hover,
+.decimal:hover {
+  background-color: #9796a18f;
+}
+
 .AC,
 .backspace {
   background-color: #a9677b;
+}
+
+.AC:hover,
+.backspace:hover {
+  background-color: #a9677b96;
 }
 
 .input .operator,
@@ -76,6 +88,11 @@ body {
   background-color: black;
   color: white;
   border: white 1px solid;
+}
+
+.operator:hover,
+.equals:hover {
+  background-color: rgba(255, 255, 255, 0.575);
 }
 
 .row-5 .number {
