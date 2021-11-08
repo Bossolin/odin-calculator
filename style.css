@@ -102,3 +102,8 @@ body {
 .row-1 .AC {
   flex: 4;
 }
+
+.result,
+.output {
+  overflow: hidden;
+}
