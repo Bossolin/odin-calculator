@@ -146,7 +146,7 @@ window.addEventListener("keydown", (e) => {
     decimalCheck = true;
   } else if (e.key == "Enter") {
     if (!num1 && !operator) return;
-    if (!num2) num2 = +output.innerText;
+    num2 = +output.innerText;
     result.innerText = `${num1} ${operator} ${num2} =`;
     num1 = operate(num1, num2, operator);
     output.innerText = num1;
