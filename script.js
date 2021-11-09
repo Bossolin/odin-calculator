@@ -38,6 +38,9 @@ inputs.forEach((input) => {
     if (computed) {
       output.innerText = "";
       computed = false;
+      num1 = 0;
+      num2 = 0;
+      operator = "";
     }
     if (output.innerText.length < 10) output.innerText += e.target.innerText;
   });
